@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Git Pull Troubleshooting Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    pre {
+      background-color: #222;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <h1>Git Pull Troubleshooting Guide</h1>
+  <p>If you're getting errors while pulling from a Git remote, follow these steps:</p>
+
+  <h2>1. Check Git Remote</h2>
+  <pre><code>git remote -v</code></pre>
+
+  <h2>2. Add Remote If Missing</h2>
+  <pre><code>git remote add origin https://github.com/your-username/your-repo.git</code></pre>
+
+  <h2>3. List Remote Branches</h2>
+  <pre><code>git ls-remote --heads origin</code></pre>
+
+  <h2>4. Set Upstream Tracking</h2>
+  <pre><code>git branch --set-upstream-to=origin/master master</code></pre>
+
+  <h2>5. Pull With Rebase</h2>
+  <pre><code>git pull --rebase</code></pre>
+
+  <p>Replace <code>master</code> with <code>main</code> if that's your remote branch name.</p>
+</body>
+</html>
+
